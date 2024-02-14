@@ -1,0 +1,16 @@
+<script>
+const params = {
+    id: 123
+}
+
+const response = await fetch('url', {
+    method: 'Post',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(params)
+});
+
+const data = await response.json();
+
+</script>

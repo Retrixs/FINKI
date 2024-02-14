@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+// condition ? value_if_true : value_if_false
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        console.log("Hello World!")
+        var strFirst = "John";
+        var strLast = 'Kennedy';
+        var strFull = strFirst + " F. " + strLast;
+        console.log(strFull)
+
+        a = 5 == 5;
+        console.log(a);
+        b = "5" == 5;
+        console.log(b);
+        c = "5" === 5;
+        console.log(c);
+        d = "5" === "5";
+        console.log(d);
+
+        var person = {fname:"John", lname:"Doe", age:25}
+        var text = "";
+        var x;
+        for(x in person){
+            text += person[x];
+        }
+
+        temp = 5; // temp is a number
+        var num_car = 25
+        var passenger_per_car = 3
+        var total_passenger = num_car * passenger_per_car
+        Alert(total_passenger)
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+<script>
+    var bg=0;
+
+    function changeColor(){
+        console.log(bg.toString(16));
+        document.body.style.backgorund = '#'+(bg+=100).tostring(16);
+    }
+
+    setInterval(changeColor, 500);
+</script>

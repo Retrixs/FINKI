@@ -1,0 +1,29 @@
+Write a JavaScript program that will show the clock work. Output:
+"14:37:42"
+"14:37:43" 
+"14:37:44"
+"14:37:45" 
+"14:37:46" 
+"14:37:47"
+
+
+<script>
+
+function displayClock(){
+    var now = new Date();
+
+    var hours = now.getHours();
+    var minutes = now.getMinutes();
+    var seconds = now.getSeconds();
+
+    console.log(formatDigit(hours) + ":" + formatDigit (minutes) + ":" + formatDigit(seconds));
+}
+
+function formatDigit(digit){
+    return digit < 10 ? "0" + digit : digit;
+}
+
+setInterval(displayClock,1000);
+
+
+</script>

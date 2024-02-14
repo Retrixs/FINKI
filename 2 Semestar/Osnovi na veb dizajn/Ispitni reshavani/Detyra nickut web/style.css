@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url(img/sidegraphic.gif) repeat-y;
+    width:100px;
+    height: 1000px; 
+    background-color: rgb(224,232,182) ;
+    color:darkgreen;
+    width: 1366px;
+    height: 1833px;
+    font-family: 'Trebuchet MS', 'Times New Roman', serif;
+    font-size: 12px;
+    margin-left: 105px;
+}
+
+#banner{
+    background: url(img/top.gif);
+    width: 552px;
+    height: 455px;
+    font-size: 0px;
+}
+
+.summary{
+    background: url(img/bar.gif) no-repeat;
+    width: 325px;
+    height: 35px;
+    font-size: 0px;
+}
+p{
+    width: 385px;
+    padding: 3px;
+    text-align: justify;
+    margin-left: -5px;
+}
+
+
+.description h3{
+    font-size: 0px;
+    background: url(img/01.gif) no-repeat;
+    width: 400px;
+    height: 60px;
+}
+
+.more h3{
+    font-size: 0px;
+    background: url(img/02.gif) no-repeat;
+    width: 400px;
+    height: 60px;
+}
+
+.history70 h3{
+    font-size: 0px;
+    background: url(img/03.gif) no-repeat;
+    width: 400px;
+    height: 60px;
+}
+
+.history80 h3{
+    font-size: 0px;
+    background: url(img/04.gif) no-repeat;
+    width: 400px;
+    height: 60px;
+}
+
+.decline h3{
+    font-size: 0px;
+    background: url(img/05.gif) no-repeat;
+    width: 400px;
+    height: 60px;
+}
+
+footer{
+    background: url(img/footer.gif) no-repeat;
+    width: 400px;
+    height: 100px;
+}
+
+.sidebar{
+    float: right;
+    margin-right: 690px;
+    margin-top: -1213px;
+}
+
+.select{
+    font-size: 0px;
+    background: url(img/playlist.gif) no-repeat;
+    width: 190px;
+    height: 30px;
+}
+
+.current-hits ul li{
+    list-style-type: none;
+}
+
+.current-hits ul li .artist-name{
+    color: red;
+    text-decoration: none;
+}
+
+.current-hits ul li a:hover{
+    border-bottom: 1px indianred dotted;
+    font-weight: bold;  
+}
+
+.current-hits ul li .song-name{
+    text-decoration: none;
+    color: darkgreen;
+}
+
+.current-hits ul li .song-name:hover{
+    color:brown;
+}
+
+.golden{
+    font-size: 0px;
+    background: url(img/goldenoldies.gif) no-repeat;
+    width: 195px;
+    height: 30px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.golden-oldies ul li{
+    list-style-type: none;
+}
+
+.golden-oldies ul li a{
+    color:darkgreen;
+    text-decoration: none;
+}
+
+.golden-oldies ul li a:hover{
+    color:brown;
+    border-bottom: 1px indianred dotted;
+    font-weight: bold;
+}
+

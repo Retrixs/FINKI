@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Tests</title>
+
+    <script>
+
+        function setBodyAttributes(attr, value){
+            if(document.body)
+            eval
+            (' document.body '+attr+' = "'+value+'" ');
+            else notSupported();
+        }
+
+    </script>
+
+</head>
+<body>
+    <div style="margin: .5in; height: 400;">
+        <form>
+            <p><b><tt>text</tt>color</b></p>
+            <select onChange="setBodyAttributes
+            ('text', this.options[this.selectedIndex].value);">
+                <option value="black">black</option>
+                <option value="darkblue">darkblue</option>
+            </select>
+
+            <p><b><tt>bgColor</tt></b></p>
+            <select onChange="setBodyAttributes
+            ('bgColor', this.options[this.selectedIndex].value);">
+            <option value="white">white</option>
+            <option value="lightgrey">gray</option>
+            </select>
+
+            <p><b><tt>link</tt></b></p>
+            <select onChange="setBodyAttributes
+            ('link', this.options[this.selectedIndex].valeu);">
+            <options value="blue">blue</options>
+            <options value="green">green</options>
+            </select>
+
+            <small><a href="http://www.google.com" id=""sample>(sample link)</a></small><br>
+        </form>
+    </div>
+    
+</body>
+</html>

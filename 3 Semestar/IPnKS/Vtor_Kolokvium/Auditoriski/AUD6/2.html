@@ -1,0 +1,30 @@
+//Write a program that in console will print the data for the following objects(book,author,status)
+
+<script>
+    var library = [
+    {
+        author: 'Kole Grkot',
+        title: 'The Road Ahead',
+        readingStatus: true
+    },
+    {
+        author: 'Andrej KotaM',
+        title: 'Walter Isaacson',
+        readingStatus: true
+    },
+    {
+        author: 'Gospodin Kamish',
+        title: 'Mockingjay: The Final Book of The Hunger Games',
+        readingStatus: false
+    }
+];
+
+for(var i = 0; i < library.length; i++){
+    var book = "'" + library[i].title + "'" + ' by ' +
+    library[i].author + ".";
+    if(library[i].readingStatus){
+        console.log("Already read " + book);
+    }else
+    console.log("You still need to read " + book);
+}
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+  <script>
+    function generateForm(){
+      let n = parseInt(document.getElementById('number').value)
+      let kind = document.getElementById('type').value;
+
+      let container = document.getElementById('container')
+      container.innerHTML = ""
+
+      for(let i = 0; i < n; i++){
+        let element = document.createElement("input")
+        element.setAttribute('type', kind)
+        let text = document.createTextNode(i)
+        container.appendChild(element);
+        container.appendChild(text);
+      }
+    }
+  </script>
+
+  <style>
+    label{
+      display: inline-block;
+      height: 24px;
+    }
+  </style>
+</head>
+
+
+<body>
+
+<div><label>Number of Elements:</label><input type="number" id="number"></div>
+<div>
+  <label>     Type</label>
+  <select id="type">
+    <option value="Checkbox">Checkbox</option>
+    <option value="Radio">Radio</option>
+  </select>
+</div>
+<div>
+  <input type="button" id="generate" value="ADD" onclick="generateForm();">
+</div>
+
+<div id="container">
+
+</div>
+</body>
+</html>

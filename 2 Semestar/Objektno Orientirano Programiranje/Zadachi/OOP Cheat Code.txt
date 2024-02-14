@@ -1,0 +1,366 @@
+// 1/8 - OOP Cheat Sheet
+
+// 'struct' bez typedef
+
+// deklariranje na strukturata
+struct Struktura {
+    int promenliva1;
+    float promenliva2;
+    char promenliva3[10];
+};
+
+// koristenje na struktura
+struct Struktura imeTuka;
+imeTuka.promenliva1 = 5;
+imeTuka.promenliva2 = 3.14;
+strcpy(imeTuka.promenliva3, "Hello!");
+
+
+// 'struct' so typedef
+
+// deklariranje na strukturata
+typedef struct Struktura {
+    int promenliva1;
+    float promenliva2;
+    char promenliva3[10];
+} Struktura; // Tuka mozhe (i najednostavno e) da iskoristite isto ime kako gore
+
+// koristenje na struktura
+Struktura imeTuka;
+imeTuka.promenliva1 = 5;
+imeTuka.promenliva2 = 3.14;
+strcpy(imeTuka.promenliva3, "Hello!");
+// 2/8 - OOP Cheat Sheet
+
+// 'struct' vo C++
+
+// deklariranje na strukturata, nema potreba od typedef
+struct Struktura {
+    int promenliva1;
+    float promenliva2;
+    char promenliva3[10];
+};
+
+// koristenje na struktura
+Struktura imeTuka;
+imeTuka.promenliva1 = 5;
+imeTuka.promenliva2 = 3.14;
+strcpy(imeTuka.promenliva3, "Hello!");
+
+// 'struct' i funkcijata kako chlen na 'struct' (samo vo C++)
+
+// deklariranje na strukturata
+struct Struktura {
+    int promenliva1;
+    float promenliva2;
+    char promenliva3[10];
+    void print();   // deklariranje prototip
+};
+
+void Struktura::print() {
+    cout << promenliva1 << " " << promenliva2 << " " << promenliva3 << endl;
+}
+
+// koristenje na struktura
+Struktura imeTuka;
+imeTuka.promenliva1 = 5;
+imeTuka.promenliva2 = 3.14;
+strcpy(imeTuka.promenliva3, "Hello!");
+// 3/8 - OOP Cheat Sheet
+
+// 'enum' - enumeracija
+
+// deklariranje na 'enum'
+
+enum Enum1 { PrvA, VtorA, TretA }               // 0, 1, 2... po default
+enum Enum2 { PrvB = 0, VtorB = 1, TretB = 2 };  // 0, 1, 2...
+enum Enum3 { PrvC = 1, VtorC = 2, TretC = 3 };  // 1, 2, 3...
+
+// primer so meseci
+enum Mesec { January = 0, February, March, April, May, June,
+             July, August, September, October, November, December };
+
+// koristenje na enum
+
+Enum1 test = PrvA;      // 0
+Enum2 test2 = VtorB;    // 1
+Enum3 test3 = TretC;    // 3
+// 4/8 - OOP Cheat Sheet
+
+// Klasa vo C++ i se shto treba da sodrzhi (prv kolokvium)
+
+class Klasa {
+private:
+    // deklariranje na promenlivi
+
+public:
+    // Default Constructor
+    Klasa() {
+        // inicijaliziranje na promenlivi
+    }
+
+    // Parameter Constructor
+    Klasa(tuka site promenlivi ili samo nekoi potrebni promenlivi) {
+        // inicijaliziranje na promenlivi
+    }
+
+    Klasa(const Klasa& k) {
+        // kopiranje na site promenlivi od 'k' vo ovaa klasa
+    }
+
+    Klasa& operator=(const Klasa& k) {
+        if(this != &k) {
+            // kopiranje na site promenlivi od 'k' vo ovaa klasa
+        }
+
+        return *this;
+    }
+
+    // 'get' metodi za sekoja promenliva
+    // 'set' metodi za sekoja promenliva
+
+    ~Klasa() {
+        // pravenje delete na site pointeri tuka
+    }
+};
+
+// Inicijalizacija na promenlivi
+
+// Spored Klasata podole mozhe da vidite kako da napravite inicijalizacija na site vidovi promenlivi
+// Koristenje na 'this->' keyword, glavno se pravi koga sakate da imate parametri so isto ime i so 'this->' vie kazhuvate na kompajlerot deka pravite referenca do promenlivata vo klasata
+
+enum TestEnum { C, B, A };
+
+class Klasa {
+    int p1;
+    float p2;
+    char* p3;
+    char p4[10];
+    enum TestEnum p5;
+
+public:
+    Klasa() {
+        // int
+        this->p1 = 1;
+        // float
+        this->p2 = 3.14;
+        // char pointer / dynamically allocated array
+        this->p3 = new char[3];
+        strcpy(this->p3, " ");
+        // char fixed array
+        strcpy(this->p4, "test");
+        // enum
+        this->p5 = A; // A = 2
+    };
+
+    Klasa(int p1, float p2, char* p3, char* p4, enum TestEnum p5) {
+        // int
+        this->p1 = p1;
+        // float
+        this->p2 = p2;
+        // char pointer / dynamically allocated array
+        this->p3 = new char[strlen(p3) + 1];
+        strcpy(this->p3, p3);
+        // char fixed array
+        strcpy(this->p4, p4);
+        // enum
+        this->p5 = p5;
+    };
+};
+ 
+// 5/8 - OOP Cheat Sheet
+
+// Primer za edna vistinska klasa vo C++
+
+class Student {
+private:
+    char *name;
+    char index[10];
+    int year;
+    float gpa;
+
+public:
+    Student() {
+        this->name = new char[2];
+        strcpy(this->name, "a");
+        strcpy(this->index, "123456");
+        this->year = 2012;
+        this->gpa = 5.0;
+    }
+
+    Student(char *name, char *index, int year, float gpa) {
+        this->name = new char[strlen(name) + 1];
+        strcpy(this->name, name);
+        strcpy(this->index, index);
+        this->year = year;
+        this->gpa = gpa;
+    }
+
+    Student(const Student& s) {
+        this->name = new char[strlen(s.name) + 1];
+        strcpy(this->name, s.name);
+        strcpy(this->index, s.index);
+        this->year = s.year;
+        this->gpa = s.gpa;
+    }
+
+    Student& operator=(const Student& s) {
+        if(this != &s) {
+            this->name = new char[strlen(s.name) + 1];
+            strcpy(this->name, s.name);
+            strcpy(this->index, s.index);
+            this->year = s.year;
+            this->gpa = s.gpa;
+        }
+
+        return *this;
+    }
+
+    char * getName() {
+        return name;
+    }
+
+    void setName(char *name) {
+        this->name = new char[strlen(name) + 1];
+        strcpy(this->name, name);
+    }
+
+    char * getIndex() {
+        return index;
+    }
+
+    void setIndex(char *index) {
+        strcpy(this->index, index);
+    }
+
+    int getYear() {
+        return year;
+    }
+
+    void setYear(int year) {
+        this->year = year;
+    }
+
+    float getGPA() {
+        return gpa;
+    }
+
+    void setGPA(float gpa) {
+        this->gpa = gpa;
+    }
+
+    void print() {
+        cout << name << " " << index << " (" << year << ", " << gpa << ")";
+    }
+
+    ~Student() {
+        delete [] name;
+    }
+};
+// 6/8 - OOP Cheat Sheet
+
+// korisni funkcii vo klasite (primer so Student klasata)
+
+// primer, sporeduvanje dali studentite se isti spored nivniot index
+bool daliIsti(Student& s) {
+    return strcmp(this->index, s.index) == 0;
+}
+
+// primer, imame druga klasa Classroom kade ima niza od Student* students i golemina int n;
+void add(Student& s) {
+    Student* tmp = new Student[n + 1];
+    for(int i = 0; i < n; i++)
+        tmp[i] = students[i];
+
+    tmp[n++] = s;
+
+    delete [] students;
+    students = new Student[n];
+
+    for(int i = 0; i < n; i++)
+        students[i] = tmp[i];
+
+    delete [] tmp;
+}
+
+void remove(Student& s) {
+    int counter = 0;
+
+    Student* tmp = new Student[n - 1];
+
+    for(int i = 0; i < n; i++) {
+        if(students[i].daliIsti(s))
+            continue;
+        tmp[counter++] = students[i];
+    }
+
+    delete [] students;
+    students = new Student[counter];
+    for(int i = 0; i < counter; i++) students[i] = tmp[i];
+    n = n - 1;
+
+    delete [] tmp;
+}
+// 7/8 - OOP Cheat Sheet
+
+// korisni funkcii za klasite
+
+void swap(int *a, int *b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
+
+void sort(int arr[], int n) {
+    // rastechki redosled, if(a[i] > a[j])
+    // opagjachki redosled, if(a[i] < a[j])
+    for(int i = 0; i < n - 1; i++) {
+        for(int j = i + 1; j < n; j++) {
+            if(arr[i] > arr[j]) {
+                swap(&arr[i], &arr[j]);
+            }
+        }
+    }
+}
+
+void bubbleSort(int arr[], int n) {
+    // rastechki redosled, if(a[j] > a[j + 1])
+    // opagjachki redosled, if(a[j] < a[j + 1])
+    for(int i = 0; i < n - 1; i++) {
+        for(int j = 0; j < n - i - 1; j++) {
+            if(arr[j] > arr[j + 1]) {
+                swap(&arr[j], &arr[j + 1]);
+            }
+        }
+    }
+}
+// 8/8 - OOP Cheat Sheet (dopolnitelno)
+
+// OVIE OPERATORI NE SE ZADOLZHITELNI ZA PRV KOLOKVIUM
+
+// operator za sporedba - ==
+// pretpostavuvame deka postoi Klasa so 3 promenlivi, p1, p2 i p3
+bool operator=(const Klasa& k) {
+    return k.p1 == k.p2]
+}
+
+// operator za pechatenje - <<
+// pretpostavuvame deka postoi Klasa so 3 promenlivi, p1, p2 i p3
+friend ostream& operator<<(ostream& os, const Klasa& k) {
+    return os << k.p1 << " " << k.p2 << " " << k.p3 << endl;
+}
+
+Klasa k;
+cout << k;
+
+// operator za dodavanje - += (slicno kako void add())
+Klasa& operator+=(const DrugaKlasa& d) {
+    // isto kako 'void add()' funkcijata, samo na kraj ima
+    return *this;
+}
+
+// operator za odzemanje - -= (slicno kako void remove())
+Klasa& operator-=(const DrugaKlasa& d) {
+    // isto kako 'void remove()' funkcijata, samo na kraj ima
+    return *this;
+}

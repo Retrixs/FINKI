@@ -1,0 +1,16 @@
+// Write a Javascript program that will display all attributes of agiven object
+
+<script>
+    var student = { name: "David Rayy", sclass: "VI", rollno: 12 };
+
+function displayAttributes(obj) {
+  // Extract all keys (attributes) of the object
+  var attributes = Object.keys(obj);
+
+  // Display the attributes separated by commas
+  console.log(attributes.join(','));
+}
+
+// Call the function with the given object
+displayAttributes(student);
+</script>

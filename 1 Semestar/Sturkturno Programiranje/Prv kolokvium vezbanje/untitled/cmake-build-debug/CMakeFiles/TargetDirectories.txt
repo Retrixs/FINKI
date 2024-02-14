@@ -1,0 +1,3 @@
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/untitled/cmake-build-debug/CMakeFiles/untitled.dir
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/untitled/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/untitled/cmake-build-debug/CMakeFiles/rebuild_cache.dir

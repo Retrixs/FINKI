@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+
+    <style>
+        #title {
+            text-align: center;
+        }
+
+        label {
+            display: inline-block;
+            width: 160px;
+            height: 24px;
+        }
+
+        h2 {
+            display: inline-block;
+            width: 260px;
+        }
+
+        table, td, th {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
+    <script>
+        // let global = 0;
+        //
+        // function addItem() {
+        //     let name = document.getElementById('name');
+        //     let item = document.getElementById('item');
+        //     let code = document.getElementById('code');
+        //     let desc = document.getElementById('desc');
+        //     let price = document.getElementById('price');
+        //     price = parseInt(price);
+        //
+        //     if (name.value === "" || item.value === "" || code.value === "" || desc.value === "" || price.value === "") {
+        //         alert("NE GI VNESOVTE SITE POLINJA")
+        //         return;
+        //     }
+        //
+        //     for (let i = 0; i < counter; i++) {
+        //         if (code.innerHTML === code[i].innerHTML) {
+        //             alert('VEKJE POSTOI KODOT')
+        //             return
+        //         }
+        //     }
+        //
+        //     checkPrice(price);
+        //
+        //     let tableRef = document.getElementById('used')
+        //     let createRow = document.createElement('tr')
+        //     createRow.innerHTML =
+        //         "<td>"+name+"</td>"+
+        //     "<td>"+item+"</td>"+
+        //     "<td>"+price * 1.1 +"</td>"+
+        //     "<td>"+code+"</td>"+
+        //     "<td>"+desc+"</td>"+
+        //     "<td><button onclick='removeRow(this);'>SOLD</button></td>";
+        //
+        //     createRow.setAttribute("auction","rows")
+        //     tableRef.
+        //
+        //     document.getElementById('counter').innerHTML++;
+        // }
+        //
+        // function removeRow(){
+        //
+        //     tr.style.background = "yellow"
+        //     document.getElementById('counter').innerHTML--;
+        // }
+        //
+        // function soldCode(code){
+        //     code.replace(/[0-9!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]/g, '');
+        // }
+        //
+        // function checkPrice() {
+        //     if (price < 0) {
+        //         alert("INVALID PRICE")
+        //     }
+        // }
+
+        function addRow() {
+            let name = document.getElementById('name').value
+            let item = document.getElementById('item').value
+            let code = document.getElementById('code').value
+            let desc = document.getElementById('desc').value
+            let price = document.getElementById('price').value
+            price = parseInt(price)
+            let used = document.getElementById('used')
+            used = used.options[used.selectedIndex].text
+            var table = document.getElementById(used + "t")
+
+            if (name && item && code && desc && price && used) {
+                table.innerHTML += "<tr>" +
+                    "<td>" + name + "</td>" +
+                    "<td>" + item + "</td>" +
+                    "<td>" + price * 1.1 + "</td>" +
+                    "<td>" + code + "</td>" +
+                    "<td>" + code + "</td>" +
+                    "<td>   <button class='sold' onclick='remove(this)'>SOLD</button>   </td>" +
+                    "</tr>"
+                update()
+            } else {
+                alert("Invalid")
+            }
+        }
+
+        function update() {
+            let num = document.getElementsByClassName('sold')
+            let counter = document.getElementById('counter')
+            counter.innerHTML = num.length
+        }
+        function remove(item) {
+            item.parentNode.parentNode.style.background = 'yellow'
+            item.parentNode.removeChild(item)
+            update()
+        }
+    </script>
+</head>
+<body>
+<h1 id="title"><strong>Online shop</strong></h1>
+
+<div><label>Name and Username</label><input type="text" id="name"></div>
+<div><label>Item</label><input type="text" id="item"></div>
+<div><label>Item code</label><input type="text" id="code"></div>
+<div><label>Item description</label><input type="text" id="desc"></div>
+<div><label>Price</label><input type="text" id="price"></div>
+<div><label>Used</label>
+    <select id="used">
+        <option>used</option>
+        <option>unused</option>
+    </select>
+</div>
+
+
+<button onclick="addRow();">Add</button>
+
+<p>Active items: <span id="counter">0</span></p>
+
+<div>
+    <h2>Unused items</h2>
+    <h2>Used items</h2>
+</div>
+
+<div style="display: inline-block">
+    <table id="usedt">
+        <tr>
+        <th>Name</th>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Code</th>
+        <th>Number</th>
+        <th>Actions</th>
+        </tr>
+    </table>
+</div>
+
+<div style="display: inline-block">
+    <table id="unusedt">
+        <tr>
+        <th>Name</th>
+        <th>Item</th>
+        <th>Price</th>
+        <th>Code</th>
+        <th>Number</th>
+        <th>Actions</th>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

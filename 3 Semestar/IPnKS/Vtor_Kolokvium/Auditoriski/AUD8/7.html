@@ -1,0 +1,33 @@
+<html>
+    <title>Document Object Models TESTS</title>
+    <body>
+        <label>2</label>
+        <ul id="list">
+            <li>item</li>
+            <li>item</li>
+        </ul>
+        <input type="button" id="add" value="add" onclick="add()"/>
+        <input type="button" id="add" value="remove" onclick="remove()"/>
+
+        <script>
+            var noli = 1;
+            function add(){
+                document.getElementById("list").insertAdjacentHTML("beforeend", '<li>item</li>');
+                update(true);
+                document.getElementyById('add');value='add' + (noli + 1);
+            }
+
+            function remove(){
+                console.log(document.getElementById('list').lastChild)
+                document.getElementById('list').removeChild(doucment.getElementById('list').lastChild)
+                update();
+                document.getElementById('add').value ='add' + (noli + 1);
+            }
+
+            function update(inc){
+                inc ? document.getElementsByTagName("label")[0].innerHTML = ++noli : document.getElementsByTagName("label")[0].innerHTML = --noli;
+            }
+            update(true);
+        </script>
+    </body>
+</html>

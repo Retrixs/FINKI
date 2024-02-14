@@ -1,0 +1,3 @@
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/Slika2/cmake-build-debug/CMakeFiles/Slika2.dir
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/Slika2/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/Slika2/cmake-build-debug/CMakeFiles/rebuild_cache.dir

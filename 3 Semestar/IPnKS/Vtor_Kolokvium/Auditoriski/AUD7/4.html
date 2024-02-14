@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Element</title>
+    <style>
+
+
+        body{
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+
+        #inputField{
+            margin-bottom: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <h2>Enter Elements:</h2>
+    <input type="text" id="inputField" placeHolder="Enter element">
+    <button onclick="addElement()">ADD</button>
+
+
+    <h2>Display Elements</h2>
+    <div id="displayArea"></div>
+    <button onclick="displayElements()">Display</button>
+
+
+    <script>
+        var elements = [];
+
+        function addElement(){
+            var inputElement = 
+            document.getElementById('inputField');
+
+            var elementValue = inputElement.value.trim();
+
+            if(elementValue !== ''){
+                elements.push(elementValue)
+                inputElement.value = '';
+            }
+
+        }
+
+        function displayElements(){
+            var displayArea = document.getElementById('displayArea');
+            displayArea.innetHTML = elements.join(', ');
+        }
+    </script>
+</body>
+</html>

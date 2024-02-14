@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Проверка на палиндром и делливост</title>
+</head>
+<body>
+
+<script>
+    function isPalindrome(num) {
+        const numStr = num.toString();
+        const reversedStr = numStr.split('').reverse().join('');
+        return numStr === reversedStr;
+    }
+    
+    function digitSum(num) {
+        return num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+    }
+
+    // Вчитување на бројот од корисникот
+    const userInput = prompt('Внесете четирицифрен број:');
+
+    // Проверка дали внесениот текст е број и дали е четирицифрен
+    if (!isNaN(userInput) && userInput.length === 4) {
+        const number = parseInt(userInput);
+
+        // Проверка за палиндром и делливост
+        const isPalindromic = isPalindrome(number);
+        const isDivisible = number % digitSum(number) === 0;
+
+        // Прикажување на резултатите во alert прозорец
+        alert(`Бројот ${number}  ${isPalindromic ? 'е палиндром' : 'не е палиндром'} и ${isDivisible ? 'се дели' : 'не се дели'} со збирот на своите цифри.`);
+    } else {
+        // Ако внесениот текст не е број или не е четирицифрен
+        alert('Внесениот број не е валиден. Ве молиме внесете четирицифрен број.');
+    }
+</script>
+
+</body>
+</html>

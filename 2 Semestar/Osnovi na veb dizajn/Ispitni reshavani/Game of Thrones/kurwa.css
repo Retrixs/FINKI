@@ -1,0 +1,287 @@
+p{
+    font-family: Times New Roman;
+}
+
+p:first-child{
+    font-family: Georgia, serif;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background-color: rgb(0,73,108);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 11px;
+    width: 770px;
+    margin: 0 auto;
+}
+
+.container{
+    width: 770px;
+    margin: 0 auto;
+}
+
+.top{
+    height: 45px;
+    width: 770px;
+    background: url(img/cover_top.png) no-repeat;
+}
+
+header{
+    background: url(img/game-of-thrones.jpg) no-repeat;
+    height: 71px;
+    width: 268px;
+    float: left;
+    margin-top: 40px;
+    margin-left: 65px;
+    text-indent: -9999px;
+}
+
+header h2{
+    background: url(img/ice-and-fire.jpg) no-repeat;
+    float: left;
+    width: 299px;
+    height: 22px;
+    margin-left: -20px;
+    margin-top:50px;
+    text-indent: -9999px;
+}
+
+.summary{
+    background: url(img/bookmark.jpg)no-repeat;
+    width:345px;
+    float: right;
+    background-position: top right;
+    margin-right: 51px;
+    margin-top: 16px;
+}
+
+.summary p{
+
+    text-align: left;
+    width: 175px;
+    margin-left: 53px;
+    margin-top: 30px;
+    margin-bottom: 50px;
+    font-style: normal;
+}
+
+.summary p:last-child{
+    color: white;
+    margin-left: 280px;
+    margin-bottom: 400px;
+    position: relative;
+    margin-top: -130px;
+    width: 50px;
+}
+
+/*.summary p.besvrska{
+    margin-top: -133px;
+    margin-bottom: 116px;
+    margin-left: 281px;
+    width: 51px;
+    color: #FFFFFF;
+    background-color: red;
+}
+
+.summary p.bezvrska a{
+    color: #FFFFFF;
+}*/
+
+.introduction {
+    background: url(img/introduction.png) no-repeat;
+    width: 212px;
+    height: 44px;
+    margin-left: 160px;
+    float: left;
+    margin-top: 80px;
+}
+
+.introduction p{
+    text-align: left;
+    width: 340px;
+    margin-left: 242px;
+    margin-bottom: 3px;
+}
+
+.introduction h3{
+    background: url(img/img_1.jpg) no-repeat;
+    text-indent: -9999px;
+    width:336px;
+    height:191px;
+    float: left;
+    margin-left: -124px;
+    margin-top: 60px;
+}
+
+
+.main{
+    background: url(img/cover.png) repeat-y;
+    width:770px;
+    height:1200px;
+}
+
+.about{
+    background: url(img/about.png) no-repeat;
+    width:176px;
+    height:45px;
+    float: left;
+    margin-top: -90px;
+    margin-left: 400px;
+}
+
+.about p{
+    text-align: right;
+    width:336 px;
+    margin-bottom: 10px;
+    margin-top: -150px;
+    margin-left: -370px;
+    margin-right: 221px;
+}
+
+.about h3{
+    background: url(img/img_2.jpg) no-repeat;
+    text-indent: -9999px;
+    height: 191px;
+    width: 336px;
+    margin-top: 47px;
+}
+
+.people{
+    background: url(img/people.png) no-repeat;
+    width:157px;
+    height:45px;
+    float: left;
+    margin-top: 100px;
+    margin-left:201px;
+}
+
+.people h3{
+    background: url(img/img_3.jpg) no-repeat;
+    width: 333px;
+    height: 213px;
+    margin-top: 50px;
+    margin-left: -163px;
+    text-indent: -9999px;
+
+}
+
+.people p{
+    float: right;
+    margin-right: -380px;
+    margin-left: 200px;
+    text-align: left;
+    margin-top: -200px;
+    margin-bottom: 200px;
+}
+
+.people2 p:first-child{
+    float: left;
+    text-align: left;
+    margin-top: 300px;
+    margin-left: 42px;
+    margin-right: -60;
+    width: 350px;
+    font-size: 11px;
+    font-family: 'Times New Roman';
+}
+
+.people2 p:nth-child(2){
+    float: left;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 400px;
+    margin-right: -60;
+    width: 350px;
+    font-size: 11px;
+    font-family: 'Times New Roman';
+}
+
+footer{
+	height: 100px;
+    width: 150px;
+    margin-right: 121px;
+    margin-top: 268px;
+    margin-bottom: 15px;
+    float: right;
+}
+
+footer a{
+    text-decoration: none;
+    padding: 10px;
+    color: black;
+}
+
+footer a:hover{
+    color:red;
+    border: 1px solid black;    
+}
+
+.wrapper{
+    background: url("img/cover_bot.png") no-repeat;
+    width: 770px;
+    height: 130px;
+
+}
+
+.most-visited{
+    background: url(img/most-visited.png) no-repeat;
+    width: 145px;
+    height: 33px;
+    float:left;
+    margin-top: -370px;
+    margin-left: 90px;
+}
+
+.most-visited h3{
+    text-indent: -9999px;
+}
+
+.navigation ul{
+    list-style-image: url(img/bull.png);
+    margin-top: 15px;
+    margin-left: 38px;
+}
+
+.navigation ul li a:hover{
+    color: red;
+}
+
+.backstage{
+    background-image: url("img/backstage.png");
+    width: 85px;
+    height: 22px;
+    float: left;
+    text-indent: -9999px;
+    margin-left: 25px;
+    margin-top: 18px;
+}
+
+.backstage-links{
+    background: url(img/notes.jpg) no-repeat;
+    width: 252px;
+    height: 249px;
+    float:left;
+    margin-top: -225px;
+    margin-left: 70px;
+}
+
+.backstage-links ul{
+    margin-top: 60px;
+    float: left;
+    margin-left: -61px;
+    list-style: none;
+}
+
+.backstage-links ul a{
+    text-decoration: none;
+}
+
+.backstage-links ul li a:hover{
+    color: red;
+    text-decoration-line: underline;
+}

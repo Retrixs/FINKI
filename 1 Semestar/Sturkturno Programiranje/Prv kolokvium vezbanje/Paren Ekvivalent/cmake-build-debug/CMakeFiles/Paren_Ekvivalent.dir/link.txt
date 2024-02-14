@@ -1,0 +1,3 @@
+"C:\Program Files\JetBrains\CLion 2022.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\Paren_Ekvivalent.dir/objects.a
+"C:\PROGRA~1\JetBrains\CLion 2022.2.4\bin\mingw\bin\ar.exe" qc CMakeFiles\Paren_Ekvivalent.dir/objects.a @CMakeFiles\Paren_Ekvivalent.dir\objects1.rsp
+"C:\PROGRA~1\JetBrains\CLion 2022.2.4\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\Paren_Ekvivalent.dir/objects.a -Wl,--no-whole-archive -o Paren_Ekvivalent.exe -Wl,--out-implib,libParen_Ekvivalent.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\Paren_Ekvivalent.dir\linklibs.rsp

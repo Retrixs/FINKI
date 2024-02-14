@@ -1,0 +1,3 @@
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/Totalno Razlicen/cmake-build-debug/CMakeFiles/Totalno_Razlicen.dir
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/Totalno Razlicen/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/Totalno Razlicen/cmake-build-debug/CMakeFiles/rebuild_cache.dir

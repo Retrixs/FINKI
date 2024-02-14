@@ -1,0 +1,3 @@
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/Goblen/cmake-build-debug/CMakeFiles/Goblen.dir
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/Goblen/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Fakultet/FINKI Materijal/Sturkturno Programiranje/Reshavani Zadachi/Goblen/cmake-build-debug/CMakeFiles/rebuild_cache.dir

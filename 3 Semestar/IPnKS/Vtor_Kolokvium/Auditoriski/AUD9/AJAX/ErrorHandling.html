@@ -1,0 +1,20 @@
+<script>
+    const xhr = new XMLHTTPRequest();
+    xhr.onreadystatechange=function(){
+        if(xhr.readyState===4){
+            if(xhr.status===200){
+                const jsonData = JSON.parse(xhr.responceText);
+                console.log(jsonData);
+            }else{
+                console.error("Error: " + xhr.status);
+            }
+        }
+    };
+
+    xhr.onerror= function(){
+        console.error("Network Error");
+    };
+
+    xhr.open("GET", "https://jsonplaceholder.typicode.com/posts", true);
+    xhr.send();
+</script>

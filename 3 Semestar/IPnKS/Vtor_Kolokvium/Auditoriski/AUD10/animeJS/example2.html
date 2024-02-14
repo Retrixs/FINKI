@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+        <style>
+            div{
+                width: 100px;
+                height: 100px;
+                background-color: green;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div>
+                
+        </div>
+        <script>
+            let animation = anime({
+                targets: 'div',
+                translateX: 900,
+                borderRadius: 25,
+                duration: 5000,
+                easing: 'linear',
+                directon: 'alternate'
+            });
+        </script>
+    </body>
+</html>

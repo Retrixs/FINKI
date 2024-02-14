@@ -1,0 +1,31 @@
+Write a Javascript function that will transform an object into a list of '[key.value]' pairs.
+
+Input: {red: "#FF0000", green: "#00FF00", white: "#FFFFFF"} 
+
+Output: [["red", "#FF0000"], ["green", "#00FF00"], ["white", "#FFFFFF"]]
+
+<script>
+   function objectToList(obj) {
+  // Get the keys of the object
+
+  var keys = Object.keys(obj);
+
+  // Create an array of [key, value] pairs
+
+  var pairs = keys.map(function(key) {
+    return [key, obj[key]];
+  });
+
+  return pairs;
+}
+
+
+var inputObject = 
+{ red: "#FF0000", green: "#00FF00", white: "#FFFFFF" };
+
+var outputList = objectToList(inputObject);
+
+console.log(outputList);
+
+    
+</script>

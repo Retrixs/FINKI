@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .box{
+                position: relative;
+                width: 100px;
+                height: 100px;
+                margin: 4px;
+                display: inline-block;
+            }
+        </style>
+        <title>Anime APP</title>
+    </head>
+    <body>
+        <div class="box" style="background-color: purple"></div>
+        <div class="box" style="background-color: green"></div>
+        <div class="box" style="background-color: black"></div>
+        <div class="box" style="background-color: grey"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+        <script>
+            anime({
+                targets:"div.box",
+                translateY: [
+                    {value: 200, duration: 500},
+                    {value: 0, duration: 800},
+                ],
+                rotate: {
+                    value: "1turn",
+                    easing: "easiInOutSine",
+                },
+                delay: function (el, i, l){
+                    return i * 1000;
+                },
+                loop:true,
+            });
+        </script>
+    </body>
+</html>

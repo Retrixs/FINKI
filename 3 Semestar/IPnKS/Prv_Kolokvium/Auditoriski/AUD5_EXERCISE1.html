@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EXERCISE 1</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 100px;
+        }
+
+        div {
+            margin-bottom: 5px;
+        }
+    </style>
+
+
+    <script>
+        function send() {
+            let x = document.getElementById('name').value;
+            let surname = document.getElementById('surname').value;
+            let mail = document.getElementById('email').value;
+            let age = document.getElementById('age').value;
+            if (x === '' || surname === '' || mail === '' || age === ''){
+                alert("Everything has been typed in");
+            }else{
+                let str = "Sir " + x + " " + surname + " are you sure";
+                if(confirm(str)){
+                    this.document.getElementById('message').value="Information was sent successfuly"
+                }else{
+                    this.document.getElementById('message').value="Information was not send";
+                    alert("Your information has not been send");
+                }
+            }
+        }
+    </script>
+
+    <h1>Форма за контакт</h1>
+
+</head>
+<body>
+
+<div><label>Име</label><input id="name" type="text"></div>
+<div><label>Презиме</label><input id="surname" type="text"></div>
+<div><label>Емаил</label><input id="email" type="text"></div>
+<div><label>Возраст</label>
+    <select id="age">
+        <option value="19">19</option>
+        <option value="20">20</option>
+        <option value="21">21</option>
+        <option value="22">22</option>
+        <option value="23">23</option>
+    </select>
+</div>
+<div>
+    <input type="button" id="btn" onclick="send();" value="Прати">
+</div>
+<input type="text" disabled="disabled" id="message">
+</body>
+</html>
